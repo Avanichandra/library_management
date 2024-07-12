@@ -4,7 +4,13 @@ app_publisher = "Avani"
 app_description = "Library management System"
 app_email = "avanichandran@gmail.com"
 app_license = "mit"
+
+
+
 # required_apps = []
+
+# your_app/hooks.py
+
 
 # Includes in <head>
 # ------------------
@@ -226,4 +232,32 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+
+fixtures = [
+    {
+        "dt": "Role",
+        "filters": [
+            ["name", "in", ["Librarian", "Library Member"]]
+        ]
+    }
+]
+
+after_migrate = ["library_management.www.install.after_migrate"]
+on_update = [ "library_management.www.update.on_update"]
+
+
+# create_user_for_library_member =["library_management.www.create.create_user_for_library_member"]
+
+
+doc_events = {
+    "create": {
+        "create_user_for_library_member": "library_management.www.create.create_user_for_library_member"
+    }
+}
+
+doc_events = {
+    "Library Member": {
+        "before_insert": "library_management.www.update.before_insert"
+    },
+}
 

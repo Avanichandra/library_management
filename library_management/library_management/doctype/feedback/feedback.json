@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{library_member}",
+ "creation": "2024-07-01 11:58:52.825297",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_lkkr",
+  "library_member",
+  "book_name",
+  "comments",
+  "rating"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_lkkr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "label": "Library Member",
+   "options": "Library Membership"
+  },
+  {
+   "fieldname": "book_name",
+   "fieldtype": "Link",
+   "label": "Book Name",
+   "options": "Article"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Long Text",
+   "label": "Comments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-01 15:10:47.080815",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Feedback",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

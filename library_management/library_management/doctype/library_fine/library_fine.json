@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-11 16:48:50.262529",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "library_transaction",
+  "library_member",
+  "fine_amount",
+  "date_issued",
+  "date_paid",
+  "status",
+  "payment_method",
+  "notes",
+  "reason_for_fine"
+ ],
+ "fields": [
+  {
+   "fetch_from": "date_issued.library_member",
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "label": "Library Member",
+   "options": "Library Member"
+  },
+  {
+   "fieldname": "fine_amount",
+   "fieldtype": "Int",
+   "label": "Fine Amount"
+  },
+  {
+   "fetch_from": "library_transaction.date",
+   "fieldname": "date_issued",
+   "fieldtype": "Date",
+   "label": "Date Issued"
+  },
+  {
+   "fetch_from": "library_transaction.date",
+   "fieldname": "date_paid",
+   "fieldtype": "Date",
+   "label": "Date Paid"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Paid\nUnpaid"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nCredit Card"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "library_transaction",
+   "fieldtype": "Link",
+   "label": "Library Transaction",
+   "options": "Library Transaction"
+  },
+  {
+   "fieldname": "reason_for_fine",
+   "fieldtype": "Data",
+   "label": "Reason for Fine"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-14 14:36:55.525571",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library Fine",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

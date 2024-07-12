@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "FC-.##### ",
+ "creation": "2024-07-02 09:46:59.919767",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "month",
+  "year",
+  "special_rate",
+  "food_counts",
+  "normal_rate",
+  "total_amount",
+  "total_count"
+ ],
+ "fields": [
+  {
+   "fieldname": "month",
+   "fieldtype": "Int",
+   "label": "Month"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year"
+  },
+  {
+   "fieldname": "total_count",
+   "fieldtype": "Int",
+   "label": "Total Count"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "special_rate",
+   "fieldtype": "Currency",
+   "label": "Special Rate"
+  },
+  {
+   "fieldname": "normal_rate",
+   "fieldtype": "Currency",
+   "label": "Normal Rate"
+  },
+  {
+   "fieldname": "food_counts",
+   "fieldtype": "Table",
+   "label": "Food Counts",
+   "options": "Daily Food Count Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-03 17:10:55.421250",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Food Count Details",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

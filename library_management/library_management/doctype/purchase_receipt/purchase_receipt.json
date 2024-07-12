@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-11 09:57:07.039936",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "items",
+  "data_file",
+  "image",
+  "blog_content",
+  "date",
+  "time",
+  "barcode",
+  "publish",
+  "code_nqsu",
+  "color",
+  "currency",
+  "location",
+  "blog_content1",
+  "password",
+  "percentage",
+  "rating",
+  "signature",
+  "duration"
+ ],
+ "fields": [
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Purchase Receipt Item"
+  },
+  {
+   "fieldname": "data_file",
+   "fieldtype": "Attach",
+   "label": "Data File"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "blog_content",
+   "fieldtype": "Text Editor",
+   "label": "Blog Content"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Datetime",
+   "label": "Time"
+  },
+  {
+   "fieldname": "barcode",
+   "fieldtype": "Barcode",
+   "label": "Barcode"
+  },
+  {
+   "fieldname": "publish",
+   "fieldtype": "Button",
+   "label": "Publish"
+  },
+  {
+   "fieldname": "code_nqsu",
+   "fieldtype": "Code"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Currency",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Geolocation",
+   "label": "Location"
+  },
+  {
+   "fieldname": "blog_content1",
+   "fieldtype": "Markdown Editor",
+   "label": "Blog Content1"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-11 11:00:02.965234",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Purchase Receipt",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

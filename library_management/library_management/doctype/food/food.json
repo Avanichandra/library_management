@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-02 12:17:49.899707",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_rm6i",
+  "amended_from",
+  "food_type",
+  "rate",
+  "food_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_rm6i",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Food",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "food_type",
+   "fieldtype": "Select",
+   "label": "Food Type",
+   "options": "Special\nNormal"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Int",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "food_name",
+   "fieldtype": "Data",
+   "label": "Food Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-02 13:07:04.149498",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Food",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

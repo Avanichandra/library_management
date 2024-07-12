@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LT.#####",
+ "creation": "2024-06-06 15:53:52.138434",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "add_more",
+  "library_member",
+  "date",
+  "amended_from",
+  "type",
+  "has_fine"
+ ],
+ "fields": [
+  {
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "label": "Library member",
+   "options": "Library Member"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "add_more",
+   "fieldtype": "Table",
+   "label": "Article",
+   "options": "Add Article"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Library Transaction",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Issue\nReturn"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type==\"Return\"",
+   "fieldname": "has_fine",
+   "fieldtype": "Check",
+   "label": "Has Fine"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-14 13:06:53.767586",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library Transaction",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
