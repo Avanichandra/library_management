@@ -323,4 +323,3 @@ function set_totals(frm) {
     }
     frm.set_value('total_amount', total);
 }
-c

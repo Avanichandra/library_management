@@ -31,6 +31,8 @@ def execute(filters=None):
 		}
 	]
 
+	data = [{"first_name":"test", "email_adrress":"test@example.com", "phone":9123456789}]
+
 	data = frappe.db.get_list("Library Member", fields=["first_name", "email_address", "phone"])
 
 	return columns, data
