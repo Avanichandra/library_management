@@ -1,50 +1,53 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-06-11 11:59:31.104149",
+ "autoname": "RID.#####",
+ "creation": "2024-07-25 16:41:16.333275",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_dn5r",
-  "document_type",
-  "document_name",
+  "library_member",
+  "article_name",
+  "reservation_date",
   "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "section_break_dn5r",
-   "fieldtype": "Section Break"
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "label": "Library Member",
+   "options": "Library Member"
+  },
+  {
+   "fieldname": "article_name",
+   "fieldtype": "Link",
+   "label": "Article Name",
+   "options": "Article"
+  },
+  {
+   "fieldname": "reservation_date",
+   "fieldtype": "Date",
+   "label": "Reservation Date"
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Payment Entry",
+   "options": "Reservation",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
-  },
-  {
-   "fieldname": "document_type",
-   "fieldtype": "Link",
-   "label": "Document Type",
-   "options": "DocType"
-  },
-  {
-   "fieldname": "document_name",
-   "fieldtype": "Dynamic Link",
-   "label": "Document Name",
-   "options": "document_type"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-11 12:03:25.402907",
+ "modified": "2024-07-26 10:41:54.841229",
  "modified_by": "Administrator",
  "module": "Library Management",
- "name": "Payment Entry",
+ "name": "Reservation",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -57,7 +60,6 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],

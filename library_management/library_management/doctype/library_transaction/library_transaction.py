@@ -25,8 +25,8 @@ class LibraryTransaction(Document):
                 article.status = "Available"
                 article.save()
 
-    def validate(self):
-        self.validate_amount()
+    # def validate(self):
+    #     self.validate_amount()
 
     def validate_issue(self):
         self.validate_membership()
@@ -64,15 +64,15 @@ class LibraryTransaction(Document):
             frappe.throw("The member does not have a valid membership")
 
     
-    def validate_amount(self):
-        total_amount = self.total_amount
-        actual_total_amount = 0
-        for article_entry in self.articles:
-            if article_entry.amount:
-                actual_total_amount += article_entry.amount
+    # def validate_amount(self):
+    #     total_amount = self.total_amount
+    #     actual_total_amount = 0
+    #     for article_entry in self.articles:
+    #         if article_entry.amount:
+    #             actual_total_amount += article_entry.amount
 
-        if total_amount != actual_total_amount:
-            frappe.throw("Total amount is incorrect")
+    #     if total_amount != actual_total_amount:
+    #         frappe.throw("Total amount is incorrect")
 
   
 

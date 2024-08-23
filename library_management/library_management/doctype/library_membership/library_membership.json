@@ -1,4 +1,3 @@
-
 {
  "actions": [],
  "allow_rename": 1,
@@ -63,7 +62,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-10 15:10:07.560658",
+ "modified": "2024-07-25 15:02:50.060704",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Membership",
@@ -84,7 +83,9 @@
    "write": 1
   }
  ],
+ "search_fields": "full_name",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "full_name"
 }

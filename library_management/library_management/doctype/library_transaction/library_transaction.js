@@ -323,3 +323,57 @@ function set_totals(frm) {
     }
     frm.set_value('total_amount', total);
 }
+
+
+frappe.ui.form.on('Library Transaction', {
+    // Triggered when a row in the child table is added or edited
+    article_on_form_rendered: function(frm) {
+        frm.fields_dict['article'].grid.get_field('row').get_query = function(doc, cdt, cdn) {
+            return {
+                filters: {
+                    // Optionally filter rows based on some criteria
+                }
+            };
+        };
+    },
+
+    // Triggered when a field value in the child table is changed
+    article: function(frm, cdt, cdn) {
+        const row = locals[cdt][cdn];
+        if (row.row) {
+            // Fetch the details of the selected row
+            frappe.call({
+                method: 'frappe.client.get',
+                args: {
+                    doctype: 'Row',
+                    name: row.row
+                },
+                callback: function(r) {
+                    if (r.message) {
+                        // Populate the row_number field in the child table
+                        frappe.model.set_value(cdt, cdn, 'row_number', r.message.row_number);
+                    }
+                }
+            });
+        } else {
+            // Clear the row_number field if no row is selected
+            frappe.model.set_value(cdt, cdn, 'row_number', '');
+        }
+    }
+});
+
+frappe.ui.form.on('Library Transaction', {
+    refresh: function(frm) {
+        frm.add_custom_button('Create Membership', () => {
+            frappe.new_doc('Library Membership', {
+                library_member: frm.doc.name
+            });
+        });
+        frm.add_custom_button('Reserve', () => {
+            frappe.new_doc('Reservation', {
+                library_member: frm.doc.name
+            });
+        });
+    }
+});
+

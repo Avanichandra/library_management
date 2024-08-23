@@ -2,7 +2,7 @@
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "format:{article_name}-{#####}",
+ "autoname": "format:BK-{#####}",
  "creation": "2024-06-06 12:01:33.592348",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -17,6 +17,8 @@
   "get_issued_count",
   "row",
   "shelf",
+  "price",
+  "genre",
   "tab_2_tab",
   "route",
   "published"
@@ -51,7 +53,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Available\nReturn"
+   "options": "Available\nIssued\nReserved"
   },
   {
    "fieldname": "publisher",
@@ -80,21 +82,33 @@
    "label": "Get Issued Count"
   },
   {
-   "fieldname": "row",
-   "fieldtype": "Int",
-   "label": "Row"
+   "fieldname": "shelf",
+   "fieldtype": "Link",
+   "label": "Shelf",
+   "options": "Shelf"
   },
   {
-   "fieldname": "shelf",
+   "fieldname": "row",
+   "fieldtype": "Link",
+   "label": "Row",
+   "options": "Row"
+  },
+  {
+   "fieldname": "price",
    "fieldtype": "Int",
-   "label": "Shelf"
+   "label": "Price"
+  },
+  {
+   "fieldname": "genre",
+   "fieldtype": "Data",
+   "label": "Genre"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2024-07-10 15:42:36.410936",
+ "modified": "2024-08-23 12:03:35.376737",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Article",
@@ -136,7 +150,10 @@
   }
  ],
  "route": "articles",
+ "search_fields": "article_name,author",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "article_name"
 }
